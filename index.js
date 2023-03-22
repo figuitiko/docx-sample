@@ -8,7 +8,7 @@ const createReportFunction = async ( data, cmdDelimiter) => {
   const buffer = await createReport({
     template,
     data,
-    cmdDelimiter: ["{", "}"],
+    cmdDelimiter: ["<<", ">>"],
   });
   
   fs.writeFileSync('report.docx', buffer)
